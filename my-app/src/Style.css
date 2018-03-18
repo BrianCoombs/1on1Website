@@ -226,3 +226,91 @@ div.testimonial {
   width:100px;
   height:25px;
 }
+
+.PhilImg1 {
+  position: absolute;
+  left: 125px;
+  top: 50px;
+  width: 400px;
+  height: 400px;
+}
+
+.eventImage1{
+  position: absolute;
+  right: 425px;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.event1 {
+  position: absolute;
+  right: 425px;
+  top: 200px;
+}
+
+.eventImage2{
+  position: absolute;
+  right: 350px;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.event2 {
+  position: absolute;
+  right: 350px;
+  top: 200px;
+}
+
+.eventImage3{
+  position: absolute;
+  right: 425px;
+  top: 250px;
+  width: 100px;
+  height: 100px;
+}
+
+.event3 {
+  position: absolute;
+  right: 425px;
+  top: 400px;
+}
+
+.eventImage4{
+  position: absolute;
+  right: 350px;
+  top: 250px;
+  width: 100px;
+  height: 100px;
+}
+
+.event4 {
+  position: absolute;
+  right: 350px;
+  top: 400px;
+}
+
+.mailing {
+  text-align: center;
+  position: absolute;
+  top: 50px;
+}
+
+.emailInput {
+  position: absolute;
+  left: 125px;
+  top: 125px;
+  width: 500px;
+  height: 50px;
+}
+
+.emailSubmit {
+  position: absolute;
+  left: 650px;
+  top: 125px;
+  width: 100px;
+  height: 50px;
+}
+
+.
