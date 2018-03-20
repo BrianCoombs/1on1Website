@@ -227,6 +227,14 @@ div.testimonial {
   height:25px;
 }
 
+div.philanthropy {
+    margin: auto;
+    height: 400px;
+    width: 800px;
+    background-color: powderblue;
+    position: relative;
+}
+
 .PhilImg1 {
   position: absolute;
   left: 125px;
@@ -313,4 +321,10 @@ div.testimonial {
   height: 50px;
 }
 
-.
+div.mailingList {
+    margin: auto;
+    height: 200px;
+    width: 800px;
+    background-color: powderblue;
+    position: relative;
+}

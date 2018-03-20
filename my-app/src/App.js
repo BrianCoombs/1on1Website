@@ -85,25 +85,25 @@ class App extends Component {
         	    <img style={{display: page4}} class="page4" src="https://i.imgur.com/c7agBZW.png" alt=""/>
         	</div>
         <h1>Philanthropy</h1>
-          <div class="Philanthropy">
+          <div class="philanthropy">
             <img class="PhilImg1" src="" alt="YMCA Partner Picture"></img>
-            <p style={{display: upcoming events}} class="upcomingEvents">"Upcoming Events"</p>
+            <p class="upcomingEvents">"Upcoming Events"</p>
 
-            <p style={{display: event1}} class="event1"> "This is event 1"</p>
-            <img style={{display: event 1}} class="eventImage1"> src="" alt="Event Picture"/>
-            <p style={{display: event2}} class="event2"> "This is event 2"</p>
-            <img style={{display: event 2}} class="eventImage2"> src="" alt="Event Picture"/>
-            <p style={{display: event3}} class="event3"> "This is event 3"</p>
-            <img style={{display: event 3}} class="eventImage3"> src="" alt="Event Picture"/>
-            <p style={{display: event4}} class="event4"> "This is event 4"</p>
-            <img style={{display: event 4}} class="eventImage4"> src="" alt="Event Picture"/>
+            <p class="event1"> "This is event 1"</p>
+            <img class="eventImage1" src="" alt="Event Picture"/>
+            <p class="event2"> "This is event 2"</p>
+            <img class="eventImage2" src="" alt="Event Picture"/>
+            <p class="event3"> "This is event 3"</p>
+            <img class="eventImage3" src="" alt="Event Picture"/>
+            <p class="event4"> "This is event 4"</p>
+            <img class="eventImage4" src="" alt="Event Picture"/>
           </div>
         <h1>Join Our Mailing List</h1>
-          <div class="MailingList">
-            <p style={{display: mailing}} class="mailing">"For discounts and free tutoring updates, we promise we hate spam as much as you do."</p>
+          <div class="mailingList">
+            <p class="mailing">"For discounts and free tutoring updates, we promise we hate spam as much as you do."</p>
             <form action="">
-              <input class="emailInput" type="text" name="emailAddress">
-              <input class="emailSubmit" type="submit" value="Submit">
+              <input class="emailInput" type="text" name="emailAddress"/>
+              <input class="emailSubmit" type="submit" value="Submit"/>
             </form>
           </div>
 
