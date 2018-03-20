@@ -86,21 +86,21 @@ class App extends Component {
         	</div>
         <h1>Philanthropy</h1>
           <div class="philanthropy">
-            <img class="PhilImg1" src="" alt="YMCA Partner Picture"></img>
-            <p class="upcomingEvents">"Upcoming Events"</p>
+            <img class="PhilImg1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="YMCA Partner Picture"></img>
+            <p class="upcomingEvents">Upcoming Events</p>
 
-            <p class="event1"> "This is event 1"</p>
-            <img class="eventImage1" src="" alt="Event Picture"/>
-            <p class="event2"> "This is event 2"</p>
-            <img class="eventImage2" src="" alt="Event Picture"/>
-            <p class="event3"> "This is event 3"</p>
-            <img class="eventImage3" src="" alt="Event Picture"/>
-            <p class="event4"> "This is event 4"</p>
-            <img class="eventImage4" src="" alt="Event Picture"/>
+            <p class="event1"> This is event 1</p>
+            <img class="eventImage1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="Event Picture"/>
+            <p class="event2"> This is event 2</p>
+            <img class="eventImage2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="Event Picture"/>
+            <p class="event3"> This is event 3</p>
+            <img class="eventImage3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="Event Picture"/>
+            <p class="event4"> This is event 4</p>
+            <img class="eventImage4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="Event Picture"/>
           </div>
         <h1>Join Our Mailing List</h1>
           <div class="mailingList">
-            <p class="mailing">"For discounts and free tutoring updates, we promise we hate spam as much as you do."</p>
+            <p class="mailing">For discounts and free tutoring updates, we promise we hate spam as much as you do.</p>
             <form action="">
               <input class="emailInput" type="text" name="emailAddress"/>
               <input class="emailSubmit" type="submit" value="Submit"/>
