@@ -1,33 +1,342 @@
+body {
+  background-color: #D7EFF2;
+}
+
 h1 {
+  color: black;
+  text-align: center;
+  font-family: 'Fjalla One';
+  font-weight: bold;
+}
+
+p {
+  font-family: 'Cantarell';
+}
+
+div.tutors {
+  margin: auto;
+  height: 400px;
+  width: 800px;
+  background-color: powderblue;
+  position: relative;
+}
+
+.tutor {
+  font-family: 'Cantarell';
+  font-size: 16px;
+  padding-left: 20px;
+  padding-top: 45px;
+}
+.tutorPhoto {
+  display: block;
+  float: right;
+  padding-right: 30px;
+  padding-top: 55px;
+  width: 60%;
+  height: 33%;
+}
+.tutorPhoto p {
+  text-align: center;
+}
+.tutorPhoto img {
+  width: 100%;
+}
+
+div.testimonial {
+    margin: auto;
+    height: 400px;
+    width: 800px;
+    background-color: powderblue;
+    position: relative;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 15px;
+  background-color: #4CAF50;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  font-family: "Cantarell";
+  font-weight: lighter;
+  padding: 15px 25px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+  position: absolute;
+}
+
+.button1{
+  top:150px;
+  left:0px;
+}
+.button2{
+  top:150px;
+  right:0px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button2 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button1 span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -10px;
+  transition: 0.5s;
+}
+
+.button2:hover span {
+  padding-right: 25px;
+}
+.button1:hover span {
+  padding-left: 10px;
+}
+.button2:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button1:hover span:after {
+  opacity: 1;
+  left: -10;
+}
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.person {
+  font-family: "Cantarell";
+  font-size: 20px;
+}
+.review {
+  font-size: 24px;
+  position: absolute;
+}
+
+.review1 {
+  left: 125px;
+  top: 100px;
+}
+.person1 {
+  position: absolute;
+  left: 175px;
+  top: 200px;
+}
+.img1 {
+  position: absolute;
+  right: 125px;
+  top: 50px;
+  width:200px;
+  height:300px;
+}
+.page1 {
+  position: absolute;
+  right: 350px;
+  bottom: 0px;
+  width:100px;
+  height:25px;
+}
+
+.review2 {
+  right: 175px;
+  top: 100px;
+}
+.person2 {
+  position: absolute;
+  right: 125px;
+  top: 200px;
+}
+.img2 {
+  position: absolute;
+  left: 125px;
+  top: 50px;
+  width:200px;
+  height:300px;
+}
+.page2 {
+  position: absolute;
+  right: 350px;
+  bottom: 0px;
+  width:100px;
+  height:25px;
+}
+
+.review3 {
+  left: 125px;
+  top: 100px;
+}
+.person3 {
+  position: absolute;
+  left: 175px;
+  top: 200px;
+}
+.img3 {
+  position: absolute;
+  right: 125px;
+  top: 50px;
+  width:200px;
+  height:300px;
+}
+.page3 {
+  position: absolute;
+  right: 350px;
+  bottom: 0px;
+  width:100px;
+  height:25px;
+}
+
+.review4 {
+  right: 175px;
+  top: 100px;
+}
+.person4 {
+  position: absolute;
+  right: 125px;
+  top: 200px;
+}
+.img4 {
+  position: absolute;
+  left: 125px;
+  top: 150px;
+  width:300px;
+  height:50px;
+}
+.page4 {
+  position: absolute;
+  right: 350px;
+  bottom: 0px;
+  width:100px;
+  height:25px;
+}
+
+div.philanthropy {
+    margin: auto;
+    height: 400px;
+    width: 800px;
+    background-color: powderblue;
+    position: relative;
+}
+
+.upcomingEvents {
+  position: relative;
+  font-size: 30px;
   text-align: center;
 }
 
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.PhilImg1 {
+  position: absolute;
+  left: 25px;
+  top: 50px;
+  width: 325px;
+  height: 325px;
 }
 
-button {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
+.eventImage1{
+  position: absolute;
+  right: 225px;
+  top: 50px;
+  width: 125px;
+  height: 125px;
 }
 
-body {
-  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
-  background: #456990;
-  color: #fff;
+.event1 {
+  position: absolute;
+  left: 450px;
+  top: 160px;
+}
+
+.eventImage2{
+  position: absolute;
+  right: 25px;
+  top: 50px;
+  width: 125px;
+  height: 125px;
+}
+
+.event2 {
+  position: absolute;
+  left: 650px;
+  top: 160px;
+}
+
+.eventImage3{
+  position: absolute;
+  right: 25px;
+  top: 225px;
+  width: 125px;
+  height: 125px;
+}
+
+.event3 {
+  position: absolute;
+  left: 450px;
+  top: 335px;
+}
+
+.eventImage4{
+  position: absolute;
+  right: 225px;
+  top: 225px;
+  width: 125px;
+  height: 125px;
+}
+
+.event4 {
+  position: absolute;
+  left: 650px;
+  top: 335px;
+}
+
+.mailing {
+  text-align: center;
+
+}
+
+.emailInput {
+  position: absolute;
+  left: 125px;
+  top: 75px;
+  width: 500px;
+  height: 20px;
+}
+
+.emailSubmit {
+  position: absolute;
+  left: 650px;
+  top: 75px;
+  width: 100px;
+  height: 25px;
+}
+
+div.mailingList {
+    margin: auto;
+    height: 200px;
+    width: 800px;
+    background-color: powderblue;
+    position: relative;
 }
 
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
