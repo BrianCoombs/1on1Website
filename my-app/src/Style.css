@@ -11,6 +11,10 @@ h1 {
     transition: opacity 0.2s;
 }
 
+.cd-horizontal-timeline.loaded {
+  opacity: 1;
+}
+
 .cd-horizontal-timeline .events-content {
   position: relative;
 }
