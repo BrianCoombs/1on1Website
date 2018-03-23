@@ -98,26 +98,26 @@ class App extends Component {
         <section id="aboutus">
           <div class="tutors">
             <br></br>
-            <p align="center">1on1 Tutoring is offering dedicated summer programs at an affordable price. Choose from a wide range of classes from SAT/ACT preparation courses to advanced overviews of different high school topics ranging from Pre-Calculus to Physics. Our programs promise a friendly experience tailored to your needs and results guaranteed to make your academic career easier.</p>
+            <p align="center">1on1 Tutoring is In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.</p>
             <div class="box">
-              <img src="/AboutUs/packet.png" />
+              <img src="/img/checklist.jpeg" />
 
               <h4>Prepared</h4>
               <p>
-                We have thousands of practice questions for K-12 courses and high school students will have tutors with personal experience excelling in the courses they teach.
+                In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
               </p>
             </div>
             <div class="box">
               <img src="AboutUs/test.png" />
               <h4>Consistent</h4>
               <p>
-                With us, you choose the tutor – if they are ever unavailable, we provide you with new, local options immediately. There will always be a tutor to fit your needs.              </p>
+                In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est. </p>
             </div>
             <div class="box" style="margin: 0;">
-              <img src="AboutUs/time.png" />
+              <img src="/img/bulb.png" />
               <h4>Efficient</h4>
               <p>
-                Affordable prices allow you three times the tutoring compared to other tutoring professionals. Tutors will come to you on whatever schedule is most convenient for you.
+                In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
               </p>
             </div>
           </div>
