@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { render } from 'react-dom';
 import Radium from "radium";
 import './Style.css'
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Jumbotron, Button } from 'react-bootstrap';
 
 
 class App extends Component {
@@ -41,6 +42,43 @@ class App extends Component {
   }
 
   render() {
+  const navbarInstance = (
+    <Navbar fixedTop inverse collapseOnSelect>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="#home1">1on1 Tutoring</a>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+      </Navbar.Header>
+      <Navbar.Collapse>
+        <Nav>
+          <NavItem eventKey={1} href="#">
+            Schedule
+          </NavItem>
+          <NavItem eventKey={2} href="#aboutus">
+            About
+          </NavItem>
+          <NavItem eventKey={3} href="#ourstory">
+            Our Story
+          </NavItem>
+          <NavItem eventKey={3} href="#testimonials">
+            Testimonials
+          </NavItem>
+          <NavItem eventKey={3} href="#philanthropy">
+            Philanthropy
+          </NavItem>
+        </Nav>
+        <Nav pullRight>
+          <NavItem eventKey={1} href="https://manager.1on1tutoring.org/client/auth">
+            Client Login
+          </NavItem>
+          <NavItem eventKey={2} href="https://manager.1on1tutoring.org/tutor/auth">
+            Tutor Login
+          </NavItem>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
 	let page1 = (this.state.page1) ? "block" : "none"
 	let page2 = (this.state.page2) ? "block" : "none"
 	let page3 = (this.state.page3) ? "block" : "none"
@@ -49,11 +87,42 @@ class App extends Component {
 	let button2 = (this.state.page4) ? "none" : "block"
     return (
       <div classname="App">
-        <h1>One on One Tutoring</h1>
-        <h1>Schedule a Tutor</h1>
-        <h1>About Us</h1>
+        {navbarInstance}
+        <section id="home1">
+            <h1>1on1 Tutoring</h1>
+            <h2>students teaching students</h2>
+        </section>
 
-        <h1>Our Story</h1>
+        <h1>Schedule a Tutor</h1>
+        <h1 id="aboutus">About Us</h1>
+        <section id="aboutus">
+          <div class="tutors">
+            <br></br>
+            <p align="center">1on1 Tutoring is offering dedicated summer programs at an affordable price. Choose from a wide range of classes from SAT/ACT preparation courses to advanced overviews of different high school topics ranging from Pre-Calculus to Physics. Our programs promise a friendly experience tailored to your needs and results guaranteed to make your academic career easier.</p>
+            <div class="box">
+              <img src="/AboutUs/packet.png" />
+
+              <h4>Prepared</h4>
+              <p>
+                We have thousands of practice questions for K-12 courses and high school students will have tutors with personal experience excelling in the courses they teach.
+              </p>
+            </div>
+            <div class="box">
+              <img src="AboutUs/test.png" />
+              <h4>Consistent</h4>
+              <p>
+                With us, you choose the tutor – if they are ever unavailable, we provide you with new, local options immediately. There will always be a tutor to fit your needs.              </p>
+            </div>
+            <div class="box" style="margin: 0;">
+              <img src="AboutUs/time.png" />
+              <h4>Efficient</h4>
+              <p>
+                Affordable prices allow you three times the tutoring compared to other tutoring professionals. Tutors will come to you on whatever schedule is most convenient for you.
+              </p>
+            </div>
+          </div>
+          </section>
+        <h1 id="ourstory" >Our Story</h1>
           <section class="section intro">
             <div class="container">
             </div>
@@ -96,7 +165,7 @@ class App extends Component {
 
           </section>
 
-        <h1>Our Tutors</h1>
+        <h1 id="ourtutors">Our Tutors</h1>
           <div class="tutors">
             <div class="tutorPhoto">
               <img src="https://pbs.twimg.com/media/BhxWutnCEAAtEQ6.jpg:large" alt="Tutor photo"></img>
@@ -107,7 +176,7 @@ class App extends Component {
             <div key="3" style={styles.tutorText} class="tutor">From your school and <br />know its teachers</div>
             <div key="4" style={styles.tutorText} class="tutor">Passionate about teaching and <br />mentoring their younger peers</div>
           </div>
-        <h1>Our Clients Testimonials</h1>
+        <h1 id="testimonials">Our Clients Testimonials</h1>
         	<div class="testimonial">
         	    <button style={{display: button1}} class="button button1" onClick={this.prv}><span>Prev </span></button>
         	    <button style={{display: button2}} class="button button2" onClick={this.nxt}><span>Next </span></button>
@@ -128,7 +197,7 @@ class App extends Component {
         	    <img style={{display: page4}} class="img4" src="https://i.imgur.com/bYHXqfV.png" alt="stars"/>
         	    <img style={{display: page4}} class="page4" src="https://i.imgur.com/c7agBZW.png" alt=""/>
         	</div>
-        <h1>Philanthropy</h1>
+        <h1 id="philanthropy">Philanthropy</h1>
           <div class="philanthropy">
             <img class="PhilImg1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="YMCA Partner Picture"></img>
             <p class="upcomingEvents">Upcoming Events</p>

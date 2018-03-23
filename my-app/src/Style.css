@@ -1,3 +1,9 @@
+<!-- Latest compiled and minified CSS for bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 body {
   background-color: #D7EFF2;
 }
@@ -12,6 +18,66 @@ h1 {
 p {
   font-family: 'Cantarell';
 }
+
+/** home top **/
+
+/** home page **/
+#home1 {
+  padding: 220px 0 300px 0;
+  text-align: center;
+  color: white;
+  background-image: url('img/tutoring.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0 60%;
+}
+  #home1 h1 {
+    font-size: 80px;
+    font-weight: 400;
+  }
+  #home1 h2 {
+    font-size: 30px;
+    color: #80c9ff;
+    font-weight: 400;
+  }
+
+/*
+About Us
+
+*/
+  #aboutus .box {
+    display: inline-block;
+    width: 240px;
+    margin: 10px 25px 25px 0;
+
+  }
+  #aboutus .box h4 {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+  }
+  #aboutus .box h5 {
+    color: black;
+    text-decoration: underline;
+    font-size: 16px;
+    text-align: center;
+    padding: 15px 0 0 0 !important;
+  }
+  #aboutus .box img {
+    display: block;
+    margin: 0px auto 25px auto;
+    width: 60px;
+  }
+  #aboutus .box p {
+    color: black;
+    font-size: 16px !important;
+    line-height: 25px;
+    padding: 15px 0 0 0 !important;
+  }
+  #aboutus .box p span {
+    font-weight: 400;
+  }
 
 div.tutors {
   margin: auto;
