@@ -406,6 +406,7 @@ div.mailingList {
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
+  background: powderblue;
 }
 
 .timeline ol {
@@ -415,13 +416,14 @@ div.mailingList {
   transition: all 1s;
 }
 
+/*timeline line*/
 .timeline ol li {
   position: relative;
   display: inline-block;
   list-style-type: none;
   width: 160px;
   height: 3px;
-  background: #fff;
+  background: #FFFFFF;
 }
 
 .timeline ol li:last-child {
@@ -445,6 +447,7 @@ div.mailingList {
   background: #F45B69;
 }
 
+/*event description text box*/
 .timeline ol li div {
   position: absolute;
   left: calc(100% + 7px);
