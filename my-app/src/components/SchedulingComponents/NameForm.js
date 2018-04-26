@@ -30,7 +30,7 @@ class NameForm extends Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Subject Requested:
-          <input type="text" name="subject" value={this.state.name} onChange={this.handleChange} />
+          <input type="text" name="subject" value={this.state.subject} onChange={this.handleChange} />
         </label>
         <label>
           Zipcode:
