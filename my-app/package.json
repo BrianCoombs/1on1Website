@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "acuityscheduling": "^0.1.7",
     "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "npm": "^5.7.1",
