@@ -8,10 +8,10 @@ class MailingList extends Component {
         <h1>Join Our Mailing List</h1>
         <div class="mailingList">
           <br/>
-          <p class="mailing">For discounts and free tutoring updates, we promise we hate spam as much as you do.</p>
+          <p class="center">For discounts and free tutoring updates, we promise we hate spam as much as you do.</p>
           <form action="">
             <input class="emailInput" type="text" name="emailAddress"/>
-            <input class="emailSubmit" type="submit" value="Submit"/>
+            <input class="inputSubmit" type="submit" value="Submit"/>
           </form>
         </div>
       </div>

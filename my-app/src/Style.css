@@ -41,6 +41,38 @@ p {
     font-weight: 400;
   }
 
+
+/*
+Find tutors
+*/
+
+div.findTutors {
+    margin: auto;
+    height: 200px;
+    width: 800px;
+    background-color: powderblue;
+    position: relative;
+}
+
+.center {
+  text-align: center;
+}
+
+.zipCodeInput {
+  position: absolute;
+  left: 125px;
+  top: 75px;
+  width: 500px;
+  height: 20px;
+}
+
+.inputSubmit {
+  position: absolute;
+  left: 650px;
+  top: 75px;
+  width: 100px;
+  height: 25px;
+}
 /*
 About Us
 
@@ -371,11 +403,6 @@ div.philanthropy {
   top: 335px;
 }
 
-.mailing {
-  text-align: center;
-
-}
-
 .emailInput {
   position: absolute;
   left: 125px;
@@ -384,13 +411,6 @@ div.philanthropy {
   height: 20px;
 }
 
-.emailSubmit {
-  position: absolute;
-  left: 650px;
-  top: 75px;
-  width: 100px;
-  height: 25px;
-}
 
 div.mailingList {
     margin: auto;
@@ -399,6 +419,8 @@ div.mailingList {
     background-color: powderblue;
     position: relative;
 }
+
+
 
 
 /* TIMELINE
