@@ -4,7 +4,7 @@ class MailingList extends Component {
 
   render() {
     return (
-      <div>
+      <div class="mail">
         <h1>Join Our Mailing List</h1>
         <div class="mailingList">
           <br/>

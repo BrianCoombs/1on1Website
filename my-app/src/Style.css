@@ -19,6 +19,8 @@ p {
   font-family: 'Cantarell';
 }
 
+
+
 /** home top **/
 
 /** home page **/
@@ -41,31 +43,6 @@ p {
     font-weight: 400;
   }
 
-
-/*
-Find tutors
-*/
-
-div.findTutors {
-    margin: auto;
-    height: 200px;
-    width: 800px;
-    background-color: powderblue;
-    position: relative;
-}
-
-.center {
-  text-align: center;
-}
-
-.zipCodeInput {
-  position: absolute;
-  left: 125px;
-  top: 75px;
-  width: 500px;
-  height: 20px;
-}
-
 .inputSubmit {
   position: absolute;
   left: 650px;
@@ -73,10 +50,30 @@ div.findTutors {
   width: 100px;
   height: 25px;
 }
-/*
-About Us
 
-*/
+.center {
+  text-align: center;
+}
+
+/** Schedule **/
+.sched {
+  background-color: white;
+  color: #334758;
+}
+/** About Us **/
+.aboutUsBg {
+  background-color: #334758;
+  color: white;
+}
+
+div.aboutUs {
+  margin: auto;
+  height: 400px;
+  width: 800px;
+  background-color: #334758;
+  position: relative;
+  color: white;
+}
   #aboutus .box {
     display: inline-block;
     width: 240px;
@@ -84,13 +81,13 @@ About Us
 
   }
   #aboutus .box h4 {
-    color: black;
+    color: white;
     font-size: 18px;
     font-weight: 500;
     text-align: center;
   }
   #aboutus .box h5 {
-    color: black;
+    color: white;
     text-decoration: underline;
     font-size: 16px;
     text-align: center;
@@ -102,7 +99,7 @@ About Us
     width: 60px;
   }
   #aboutus .box p {
-    color: black;
+    color: white;
     font-size: 16px !important;
     line-height: 25px;
     padding: 15px 0 0 0 !important;
@@ -110,12 +107,26 @@ About Us
   #aboutus .box p span {
     font-weight: 400;
   }
+/** Our Story **/
+.ourStory {
+  background-color: white;
+  color: #334758;
+}
+
+/** Tutors **/
+.tutorsBg {
+  background-color: #EEF0F1;
+}
+.tutorsBg h1 {
+  color: #334758;
+}
 
 div.tutors {
   margin: auto;
   height: 400px;
   width: 800px;
-  background-color: powderblue;
+  background-color: #EEF0F1;
+  color: #486279;
   position: relative;
 }
 
@@ -124,6 +135,7 @@ div.tutors {
   font-size: 16px;
   padding-left: 20px;
   padding-top: 45px;
+  color: #486279;
 }
 .tutorPhoto {
   display: block;
@@ -140,18 +152,25 @@ div.tutors {
   width: 100%;
 }
 
+/** Testimonials **/
+.testm {
+  background-color: white;
+  color: #334758;
+}
+
 div.testimonial {
     margin: auto;
     height: 400px;
     width: 800px;
-    background-color: powderblue;
+    background-color: white;
+    color: #486279;
     position: relative;
 }
 
 .button {
   display: inline-block;
   border-radius: 15px;
-  background-color: #4CAF50;
+  background-color: #334758;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -212,7 +231,7 @@ div.testimonial {
   opacity: 1;
   left: -10;
 }
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #1E2E3B}
 
 .button:active {
   background-color: #3e8e41;
@@ -325,11 +344,19 @@ div.testimonial {
   height:25px;
 }
 
-div.philanthropy {
+
+/** Philanthropy **/
+.phil {
+  background-color: #334758;
+  color: white;
+}
+
+
+div.philan {
     margin: auto;
     height: 400px;
     width: 800px;
-    background-color: powderblue;
+    background-color: #334758;
     position: relative;
 }
 
@@ -412,12 +439,18 @@ div.philanthropy {
 }
 
 
+/** Mailing list **/
+
+.mail {
+  color: #334758;
+}
 div.mailingList {
     margin: auto;
     height: 200px;
     width: 800px;
-    background-color: powderblue;
+    background-color: white;
     position: relative;
+    color: #486279;
 }
 
 
@@ -428,7 +461,7 @@ div.mailingList {
 .timeline {
   white-space: nowrap;
   overflow-x: hidden;
-  background: powderblue;
+  background: white;
 }
 
 .timeline ol {
@@ -445,7 +478,7 @@ div.mailingList {
   list-style-type: none;
   width: 160px;
   height: 3px;
-  background: #FFFFFF;
+  background: #334758;
 }
 
 .timeline ol li:last-child {
@@ -477,8 +510,8 @@ div.mailingList {
   padding: 15px;
   font-size: 1rem;
   white-space: normal;
-  color: black;
-  background: white;
+  color: #486279;
+  background: #EEF0F1;
 }
 
 .timeline ol li div::before {
@@ -499,7 +532,7 @@ div.mailingList {
 .timeline ol li:nth-child(odd) div::before {
   top: 100%;
   border-width: 8px 8px 0 0;
-  border-color: white transparent transparent transparent;
+  border-color: #EEF0F1 transparent transparent transparent;
 }
 
 .timeline ol li:nth-child(even) div {
@@ -509,7 +542,7 @@ div.mailingList {
 .timeline ol li:nth-child(even) div::before {
   top: -8px;
   border-width: 8px 0 0 8px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent #EEF0F1;
 }
 
 .timeline time {

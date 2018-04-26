@@ -4,10 +4,11 @@ class AboutUs extends Component {
 
   render() {
     return (
-      <div>
-        <h1 id="aboutus">About Us</h1>
+      <div class="aboutUsBg" id="aboutus">
+        <br/>
+        <h1 >About Us</h1>
         <section id="aboutus">
-        <div class="tutors">
+        <div class="aboutUs">
           <br/>
           <p align="center">1on1 Tutoring is In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.</p>
           <div class="box">

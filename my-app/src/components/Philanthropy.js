@@ -4,9 +4,10 @@ class Philanthropy extends Component {
 
   render() {
     return (
-      <div>
-        <h1 id="philanthropy">Philanthropy</h1>
-        <div class="philanthropy">
+      <div class="phil" id="philanthropy">
+        <br/>
+        <h1>Philanthropy</h1>
+        <div class="philan">
           <img class="PhilImg1" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="YMCA Partner Picture"></img>
           <p class="upcomingEvents">Upcoming Events</p>
 
@@ -19,6 +20,7 @@ class Philanthropy extends Component {
           <p class="event4"> This is event 4</p>
           <img class="eventImage4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png" alt="Event Picture"/>
         </div>
+        <br/>
       </div>
     );
   }

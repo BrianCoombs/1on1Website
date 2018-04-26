@@ -48,7 +48,8 @@ class Testimonials extends Component {
   	let button2 = (this.state.page4) ? "none" : "block"
 
     return (
-      <div>
+      <div class="testm">
+        <br/>
         <h1 id="testimonials">Our Clients Testimonials</h1>
         <div class="testimonial">
           <button style={{display: button1}} class="button button1" onClick={this.prv}><span>Prev </span></button>
@@ -56,20 +57,21 @@ class Testimonials extends Component {
           <p style={{display: page1}} class="review review1">"This place is great!"</p>
             <p style={{display: page1}} class="person person1">-Distinguished Customer</p>
           <img style={{display: page1}} class="img1" src="https://images-na.ssl-images-amazon.com/images/M/MV5BMjI0MTg3MzI0M15BMl5BanBnXkFtZTcwMzQyODU2Mw@@._V1_UY317_CR10,0,214,317_AL_.jpg" alt="1-time Oscar winner"/>
-          <img style={{display: page1}} class="page1" src="https://i.imgur.com/exar0UV.png" alt=""/>
+          <img style={{display: page1}} class="page1" src="https://i.imgur.com/oD6lxBv.png" alt=""/>
           <p style={{display: page2}} class="review review2">"I am Yale Patt!"</p>
             <p style={{display: page2}} class="person person2">-Yale Patt</p>
           <img style={{display: page2}} class="img2" src="https://www.ithistory.org/sites/default/files/honor-roll/Yale%20N.%20Patt.jpg" alt="Distinguished professor"/>
-          <img style={{display: page2}} class="page2" src="https://i.imgur.com/Orw0hDN.png" alt=""/>
+          <img style={{display: page2}} class="page2" src="https://i.imgur.com/SRpxOVx.png" alt=""/>
           <p style={{display: page3}} class="review review3">"3 Michelin Stars"</p>
             <p style={{display: page3}} class="person person3">-Celebrity Chef</p>
           <img style={{display: page3}} class="img3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Gordon_Ramsay.jpg/330px-Gordon_Ramsay.jpg" alt="chef"/>
-          <img style={{display: page3}} class="page3" src="https://i.imgur.com/F0C1rkf.png" alt=""/>
+          <img style={{display: page3}} class="page3" src="https://i.imgur.com/bkyGir0.png" alt=""/>
           <p style={{display: page4}} class="review review4">"5 stars out of 5"</p>
             <p style={{display: page4}} class="person person4">-Princeton Review</p>
-          <img style={{display: page4}} class="img4" src="https://i.imgur.com/bYHXqfV.png" alt="stars"/>
-          <img style={{display: page4}} class="page4" src="https://i.imgur.com/c7agBZW.png" alt=""/>
+          <img style={{display: page4}} class="img4" src="https://static1.squarespace.com/static/56379329e4b0020557b065cf/t/58f0db5a03596e9d44b7b898/1492179808019/" alt="stars"/>
+          <img style={{display: page4}} class="page4" src="https://i.imgur.com/tFV9rkt.png" alt=""/>
         </div>
+        <br/>
       </div>
     );
   }
