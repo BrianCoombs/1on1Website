@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import NameForm from './SchedulingComponents/NameForm'
 
-class ScheduleTutor extends Component {
+export default class ScheduleTutor extends Component {
 
   render() {
     return (
@@ -16,5 +16,3 @@ class ScheduleTutor extends Component {
     );
   }
 }
-
-export default ScheduleTutor;

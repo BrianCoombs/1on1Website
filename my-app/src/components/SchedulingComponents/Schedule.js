@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
+import acuityscheduling from 'acuityscheduling'
 
 class Schedule extends Component {
   constructor(props){
     super(props);
     this.state = {
-      subject: '',
-      zip: '',
-      name: ''
-
+      web: props.url,
+      name: props.name
     };
   }
+
 
   render() {
     return(
       <div>
-        <iframe src="https://app.acuityscheduling.com/schedule.php?owner=13918864" width="100%" height="800" frameBorder="0"></iframe>
+        <h3>{this.state.name}</h3>
+        <iframe src={this.state.web} width="50%" height="200" frameBorder="0"></iframe>
         <script src="https://d3gxy7nm8y4yjr.cloudfront.net/js/embed.js" type="text/javascript"></script>
       </div>
     );
