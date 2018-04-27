@@ -8,7 +8,7 @@ export default class NameForm extends Component {
       subject: '',
       zip: '',
       name: '',
-      shedulesHidden: true
+      schedulesHidden: true
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

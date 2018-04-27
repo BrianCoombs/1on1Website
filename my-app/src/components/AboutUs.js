@@ -12,7 +12,7 @@ class AboutUs extends Component {
           <br/>
           <p align="center">1on1 Tutoring is In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.</p>
           <div class="box">
-            <img src="http://www.sswater.net/images/blog/Checkmark_2_1355257576_7264.png" alt="check"/>
+            <img src="http://www.sswater.net/images/blog/Checkmark_2_1355257576_7264.png"/>
             <h4>Prepared</h4>
             <p>
               In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
