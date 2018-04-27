@@ -12,3 +12,19 @@ it('renders correctly', () => {
   );
   expect(toJson(component)).toMatchSnapshot();
 });
+
+it('check integration of components', () => {
+  const component = shallow(
+    <App />
+  );
+  expect(component.find("NavigationBar")).toHaveLength(1);
+  expect(component.find("HomeScreen")).toHaveLength(1);
+  expect(component.find("ScheduleTutor")).toHaveLength(1);
+  expect(component.find("AboutUs")).toHaveLength(1);
+  expect(component.find("OurStory")).toHaveLength(1);
+  expect(component.find("OurTutors")).toHaveLength(1);
+  expect(component.find("Testimonials")).toHaveLength(1);
+  expect(component.find("Philanthropy")).toHaveLength(1);
+  expect(component.find("MailingList")).toHaveLength(1);
+
+});

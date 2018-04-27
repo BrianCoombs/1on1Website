@@ -22,3 +22,12 @@ it('test submit', () => {
   component.find('form').simulate('submit', { preventDefault () {} });
   expect(component.state().schedulesHidden).toEqual(true);
 });
+
+it('test integration', () => {
+  const component = shallow(
+    <NameForm />
+  );
+  expect(component.find("AllSchedules")).toHaveLength(0);
+  component.find('form').simulate('submit', { preventDefault () {} });
+  expect(component.find("AllSchedules")).toHaveLength(1);
+});
