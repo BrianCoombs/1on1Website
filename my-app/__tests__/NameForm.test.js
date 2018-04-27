@@ -11,14 +11,14 @@ it('should show initial states', () => {
   const component = shallow(
     <NameForm />
   );
-  expect(component.state().schedulesHidden).toEqual(true);
+  expect(component.state().schedulesHidden).toEqual(false);
 });
 
 it('test submit', () => {
   const component = shallow(
     <NameForm />
   );
-  expect(component.state().schedulesHidden).toEqual(true);
-  component.find('form').simulate('submit', { preventDefault () {} });
   expect(component.state().schedulesHidden).toEqual(false);
+  component.find('form').simulate('submit', { preventDefault () {} });
+  expect(component.state().schedulesHidden).toEqual(true);
 });

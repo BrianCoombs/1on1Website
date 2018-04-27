@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  class="tutorsBg"
+>
+  <br />
+  <h1
+    id="ourtutors"
+  >
+    Our Tutors
+  </h1>
+  <div
+    class="tutors"
+  >
+    <div
+      class="tutorPhoto"
+    >
+      <img
+        alt="Tutor photo"
+        src="https://pbs.twimg.com/media/BhxWutnCEAAtEQ6.jpg:large"
+      />
+      <p>
+        Tutors 2018
+      </p>
+    </div>
+    <div
+      class="tutor"
+      key="1"
+    >
+      Top 5%
+    </div>
+    <div
+      class="tutor"
+      key="2"
+    >
+      Trained and selected for 
+      <br />
+      their expertise in a subect
+    </div>
+    <div
+      class="tutor"
+      key="3"
+    >
+      From your school and 
+      <br />
+      know its teachers
+    </div>
+    <div
+      class="tutor"
+      key="4"
+    >
+      Passionate about teaching and 
+      <br />
+      mentoring their younger peers
+    </div>
+  </div>
+  <br />
+</div>
+`;

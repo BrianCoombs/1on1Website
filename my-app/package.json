@@ -29,6 +29,9 @@
     "jest": "^22.4.3"
   },
   "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "../__mocks__/styleMock.js"
+    },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]
