@@ -8,15 +8,15 @@ export default class AllSchedules extends Component {
     this.state = {
       //Test run with getting 1 name to return a schedule
       calendars : [
-        {name: "Neeha", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448052'},
-        {name: "Rohith", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448067'},
-        {name: "Anuttham", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448061'}
+        {name: "Neeha", web: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448052'},
+        {name: "Rohith", web: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448067'},
+        {name: "Anuttham", web: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448061'}
       ]
     };
   }
 
   createSchedule (calendar) {
-    return <Schedule url={calendar.url} key={calendar.name} name={calendar.name}/>;
+    return <Schedule web={calendar.web} key={calendar.name} name={calendar.name}/>;
   }
 
   createSchedules(calendars) {
