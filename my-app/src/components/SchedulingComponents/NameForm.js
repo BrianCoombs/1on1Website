@@ -8,7 +8,7 @@ export default class NameForm extends Component {
       subject: '',
       zip: '',
       name: '',
-      shedulesHidden: true
+      schedulesHidden: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,7 +27,7 @@ export default class NameForm extends Component {
     */
 
     this.setState({
-      schedulesHidden: !this.state.schedulesHidden
+      schedulesHidden: true
     })
 
     //alert('A name was submitted: ' + this.state.name + ' with zip of ' + this.state.zip + ' with requested subject of ' + this.state.subject);

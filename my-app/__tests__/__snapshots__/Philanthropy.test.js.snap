@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  class="phil"
+  id="philanthropy"
+>
+  <br />
+  <h1>
+    Philanthropy
+  </h1>
+  <div
+    class="philan"
+  >
+    <img
+      alt="YMCA Partner Picture"
+      class="PhilImg1"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png"
+    />
+    <p
+      class="upcomingEvents"
+    >
+      Upcoming Events
+    </p>
+    <p
+      class="event1"
+    >
+       This is event 1
+    </p>
+    <img
+      alt="Event Picture"
+      class="eventImage1"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png"
+    />
+    <p
+      class="event2"
+    >
+       This is event 2
+    </p>
+    <img
+      alt="Event Picture"
+      class="eventImage2"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png"
+    />
+    <p
+      class="event3"
+    >
+       This is event 3
+    </p>
+    <img
+      alt="Event Picture"
+      class="eventImage3"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png"
+    />
+    <p
+      class="event4"
+    >
+       This is event 4
+    </p>
+    <img
+      alt="Event Picture"
+      class="eventImage4"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Dog_coat_variation.png/440px-Dog_coat_variation.png"
+    />
+  </div>
+  <br />
+</div>
+`;

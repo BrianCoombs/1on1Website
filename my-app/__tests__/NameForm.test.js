@@ -7,10 +7,29 @@ import { render } from 'react-dom';
 
 configure({adapter: new Adapter()});
 
-it('onclick submit schedule search', () => {
+it('should show initial states', () => {
   const component = shallow(
     <NameForm />
   );
-  component.find('submit').at(1).simulate('click');
+  expect(component.state().schedulesHidden).toEqual(true);
+});
+
+it('test submit', () => {
+  const component = shallow(
+    <NameForm />
+  );
+  expect(component.state().schedulesHidden).toEqual(true);
+  component.find('form').simulate('submit', { preventDefault () {} });
   expect(component.state().schedulesHidden).toEqual(false);
 });
+
+/*
+it('test integration', () => {
+  const component = shallow(
+    <NameForm />
+  );
+  expect(component.find("AllSchedules")).toHaveLength(0);
+  component.find('form').simulate('submit', { preventDefault () {} });
+  expect(component.find("AllSchedules")).toHaveLength(1);
+});
+*/

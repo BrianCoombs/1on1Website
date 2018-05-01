@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Radium from "radium";
-import './Style.css'
+import './Style.css';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Jumbotron, Button } from 'react-bootstrap';
 
 import NavigationBar from './components/NavigationBar'
