@@ -14,7 +14,7 @@ class NavigationBar extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem eventKey={1} href="#">
+            <NavItem eventKey={1} href="#schedule">
               Schedule
             </NavItem>
             <NavItem eventKey={2} href="#aboutus">
@@ -41,7 +41,7 @@ class NavigationBar extends Component {
         </Navbar.Collapse>
       </Navbar>
     );
-    
+
     return (
       <div>
         {navbarInstance}

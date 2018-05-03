@@ -7,7 +7,7 @@ class OurTutors extends Component {
   render() {
     return (
       <div class="tutorsBg">
-        <br/>
+        <br/><br/><br/>
         <h1 id="ourtutors">Our Tutors</h1>
         <div class="tutors">
           <div class="tutorPhoto">
@@ -19,7 +19,7 @@ class OurTutors extends Component {
           <div key="3" class="tutor">From your school and <br />know its teachers</div>
           <div key="4" class="tutor">Passionate about teaching and <br />mentoring their younger peers</div>
         </div>
-        <br/>
+        <br/><br/><br/>
       </div>
     );
   }

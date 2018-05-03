@@ -6,12 +6,12 @@ export default class ScheduleTutor extends Component {
 
   render() {
     return (
-      <div class="sched">
+      <div class="sched" id="schedule">
         <br/>
-        <h1 id="schedule">Schedule a Tutor</h1>
+        <h1>Schedule a Tutor</h1>
         <br/>
         < NameForm />
-        <br/>
+        <br/><br/><br/>
       </div>
     );
   }

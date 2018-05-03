@@ -77,7 +77,7 @@ export default class NameForm extends Component {
             <input type="text" name="zip" value={this.state.zip} onChange={this.handleChange} />
           </label>
           <label>
-            "Tutor's name (optional):"
+            Tutor name (optional):
             <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
           </label>
           <input type="submit" value="Submit" />

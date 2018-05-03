@@ -5,7 +5,7 @@ class OurStory extends Component {
   render() {
     return (
       <div class="ourStory" id="ourstory">
-        <br/>
+        <br/><br/><br/>
         <h1 >Our Story</h1>
         <section class="section intro">
           <div class="container">
@@ -47,6 +47,7 @@ class OurStory extends Component {
             <li></li>
           </ol>
         </section>
+        <br/>
       </div>
     );
   }

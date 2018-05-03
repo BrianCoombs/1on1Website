@@ -28,7 +28,7 @@ p {
   padding: 220px 0 300px 0;
   text-align: center;
   color: white;
-  background-image: url('img/tutoring.jpeg');
+  background-image: url('img/tutoring.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: 0 60%;
@@ -56,10 +56,24 @@ p {
 }
 
 /** Schedule **/
+
+div.sched {
+  margin: auto;
+
+  width: 1200px;
+  background-color: white;
+  color: #334758;
+  position: relative;
+}
+
 .sched {
+  font-size: 16px;
+  padding-left: 20px;
+  padding-top: 45px;
   background-color: white;
   color: #334758;
 }
+
 /** About Us **/
 .aboutUsBg {
   background-color: #334758;
@@ -385,7 +399,7 @@ div.philan {
 .event1 {
   position: absolute;
   left: 450px;
-  top: 160px;
+  top: 180px;
 }
 
 .eventImage2{
@@ -399,10 +413,10 @@ div.philan {
 .event2 {
   position: absolute;
   left: 650px;
-  top: 160px;
+  top: 180px;
 }
 
-.eventImage3{
+.eventImage4{
   position: absolute;
   right: 25px;
   top: 225px;
@@ -413,10 +427,10 @@ div.philan {
 .event3 {
   position: absolute;
   left: 450px;
-  top: 335px;
+  top: 355px;
 }
 
-.eventImage4{
+.eventImage3{
   position: absolute;
   right: 225px;
   top: 225px;
@@ -427,7 +441,7 @@ div.philan {
 .event4 {
   position: absolute;
   left: 650px;
-  top: 335px;
+  top: 355px;
 }
 
 .emailInput {

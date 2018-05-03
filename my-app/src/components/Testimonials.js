@@ -48,9 +48,9 @@ class Testimonials extends Component {
   	let button2 = (this.state.page4) ? "none" : "block"
 
     return (
-      <div class="testm">
-        <br/>
-        <h1 id="testimonials">Our Clients Testimonials</h1>
+      <div class="testm" id="testimonials">
+        <br/><br/><br/>
+        <h1>Our Clients Testimonials</h1>
         <div class="testimonial">
           <button style={{display: button1}} class="button button1" onClick={this.prv}><span>Prev </span></button>
           <button style={{display: button2}} class="button button2" onClick={this.nxt}><span>Next </span></button>
@@ -71,7 +71,7 @@ class Testimonials extends Component {
           <img style={{display: page4}} class="img4" src="https://static1.squarespace.com/static/56379329e4b0020557b065cf/t/58f0db5a03596e9d44b7b898/1492179808019/" alt="stars"/>
           <img style={{display: page4}} class="page4" src="https://i.imgur.com/tFV9rkt.png" alt=""/>
         </div>
-        <br/>
+        <br/><br/><br/>
       </div>
     );
   }
