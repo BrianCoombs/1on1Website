@@ -2,51 +2,53 @@ import React, { Component } from 'react'
 
 class OurStory extends Component {
 
+
   render() {
+
     return (
       <div class="ourStory" id="ourstory">
         <br/><br/><br/>
         <h1 >Our Story</h1>
-        <section class="section intro">
-          <div class="container">
-          </div>
-        </section>
 
         <section class="timeline">
-          <ol>
+          <ul>
+
             <li>
               <div>
-                <time>01/01/2010</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                <time>Jan 2011</time> At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
               </div>
             </li>
+
             <li>
               <div>
-                <time>02/03/2011</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                <time>October 2012</time> Proin iaculis, nibh eget efficitur varius, libero tellus porta dolor, at pulvinar tortor ex eget ligula. Integer eu dapibus arcu, sit amet sollicitudin eros.
               </div>
             </li>
+
             <li>
               <div>
-                <time>03/03/2013</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                <time>May 2014</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
               </div>
             </li>
+
             <li>
               <div>
-                <time>03/03/2014</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                <time>November 2014</time> Aenean condimentum odio a bibendum rhoncus. Ut mauris felis, volutpat eget porta faucibus, euismod quis ante.
               </div>
             </li>
+
             <li>
               <div>
-                <time>03/03/2015</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
+                <time>October 2015</time> Vestibulum porttitor lorem sed pharetra dignissim. Nulla maximus, dui a tristique iaculis, quam dolor convallis enim, non dignissim ligula ipsum a turpis.
               </div>
             </li>
-            <li>
-              <div>
-                <time>01/03/2016</time> In mattis elit vitae odio posuere, nec maximus massa varius. Suspendisse varius volutpat mattis. Vestibulum id magna est.
-              </div>
-            </li>
-            <li></li>
-          </ol>
+
+
+
+          </ul>
         </section>
+
+
         <br/>
       </div>
     );
