@@ -33,4 +33,10 @@ var response = res;
 
 });
 
+
+app.get('/api/mailchimp', (req, res) => {
+
+
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));

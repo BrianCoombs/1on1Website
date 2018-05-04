@@ -11,11 +11,7 @@ export default class NameForm extends Component {
       zip: '',
       name: '',
       schedulesHidden: false,
-      tutors : [
-        {name: "Neeha", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448052'},
-        {name: "Rohith", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448067'},
-        {name: "Anuttham", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448061'}
-      ]
+      tutors : [3]
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -67,21 +63,51 @@ export default class NameForm extends Component {
   };
 
   findTutors (acuityRes) {
+    //this.clearList;
     var currTutor = 0;
     //Check name first
-    for(var i = 0; i < acuityRes.length; i++) {
-      var tutor = acuityRes[i];
-      if(tutor.name.includes(this.state.name)){
-        var tempTutors = this.state.tutors;
-        tempTutors[currTutor].name = tutor.name;
-        tempTutors[currTutor].url = ('https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=' + tutor.id);
-        this.setState({
-          tutors : tempTutors
-        });
+    if(this.state.name.length>0){
+      for(var i = 0; i < acuityRes.length; i++) {
+        var tutor = acuityRes[i];
+        if(tutor.name.toUpperCase().includes(this.state.name.toUpperCase())){
+          acuityRes.splice(i, 1);
+          this.addTutorToList(currTutor, tutor);
+          currTutor++;
+          break;
+        }
       }
     }
-    //acuityRes.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
 
+    //acuityRes.sort((a, b) => a.location.substring(0,4) - b.location.substring(0,4));
+    if(this.state.subject.length>0){
+      while(currTutor < 3){
+        for(var i = 0; i<acuityRes.length; i++){
+          var tutor = acuityRes[i];
+          if(tutor.description.toUpperCase().includes(this.state.subject.toUpperCase())){
+            acuityRes.splice(i, 1);
+            this.addTutorToList(currTutor, tutor);
+            break;
+          }
+        }
+        currTutor++
+      }
+    }
+  }
+
+  addTutorToList(currTutor, tutor) {
+    var tempTutors = this.state.tutors;
+    var newTutor = {name:tutor.name, url:('https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=' + tutor.id)};
+    tempTutors[currTutor] = newTutor;
+    this.setState({
+      tutors : tempTutors
+    });
+  }
+
+  clearList() {
+    var tempTutors = [3];
+    this.setState({
+      tutors : tempTutors
+    });
   }
 
 

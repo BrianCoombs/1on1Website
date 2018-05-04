@@ -7,6 +7,7 @@ class Schedule extends Component {
     this.state = {
       web: props.url,
       name: props.name
+
     };
   }
 
