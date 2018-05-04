@@ -42,7 +42,7 @@ export default class NameForm extends Component {
     });
     */
 
-    this.callApi()
+    this.callAcuityApi()
       .then(res => alert(res.express))
       .catch(err => console.log(err));
 
@@ -54,14 +54,19 @@ export default class NameForm extends Component {
     event.preventDefault();
   }
 
-  callApi = async () => {
-    const response = await fetch('/api/hello');
+  callAcuityApi = async () => {
+    const response = await fetch('/api/acuity');
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
 
     return body;
   };
+  /*
+  findTutors(var acuityRes){
+
+  }
+  */
 
   render() {
     return (
