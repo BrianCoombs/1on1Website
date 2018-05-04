@@ -1,13 +1,7 @@
 import React, { Component } from 'react'
 import AllSchedules from './AllSchedules'
 import acuityscheduling from 'acuityscheduling'
-
-
 const request = require('request');
-
-//const express = require('express');
-//const app = express();
-//const Acuity = require('acuityscheduling');
 
 export default class NameForm extends Component {
   constructor(props) {
@@ -16,7 +10,12 @@ export default class NameForm extends Component {
       subject: '',
       zip: '',
       name: '',
-      schedulesHidden: false
+      schedulesHidden: false,
+      tutors : [
+        {name: "Neeha", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448052'},
+        {name: "Rohith", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448067'},
+        {name: "Anuttham", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448061'}
+      ]
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -41,14 +40,18 @@ export default class NameForm extends Component {
       alert(body.explanation);
     });
     */
-
     this.callAcuityApi()
-      .then(res => alert(res.express))
+      .then(res =>
+        {
+          this.findTutors(res);
+          alert(JSON.stringify(res, null, '  '));
+        }
+      )
       .catch(err => console.log(err));
 
     this.setState({
-      schedulesHidden: !(this.state.schedulesHidden)
-    })
+      schedulesHidden: true
+    });
 
     //alert('A name was submitted: ' + this.state.name + ' with zip of ' + this.state.zip + ' with requested subject of ' + this.state.subject);
     event.preventDefault();
@@ -62,11 +65,25 @@ export default class NameForm extends Component {
 
     return body;
   };
-  /*
-  findTutors(var acuityRes){
+
+  findTutors (acuityRes) {
+    var currTutor = 0;
+    //Check name first
+    for(var i = 0; i < acuityRes.length; i++) {
+      var tutor = acuityRes[i];
+      if(tutor.name.includes(this.state.name)){
+        var tempTutors = this.state.tutors;
+        tempTutors[currTutor].name = tutor.name;
+        tempTutors[currTutor].url = ('https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=' + tutor.id);
+        this.setState({
+          tutors : tempTutors
+        });
+      }
+    }
+    //acuityRes.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
 
   }
-  */
+
 
   render() {
     return (
@@ -87,7 +104,7 @@ export default class NameForm extends Component {
           <input type="submit" value="Search" />
         </form>
         <div>
-            { this.state.schedulesHidden ? <AllSchedules /> : null }
+            { this.state.schedulesHidden ? <AllSchedules tutors={this.state.tutors}/> : null }
         </div>
       </div>
     );

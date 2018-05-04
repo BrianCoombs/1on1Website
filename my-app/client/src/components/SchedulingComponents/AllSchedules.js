@@ -7,26 +7,22 @@ export default class AllSchedules extends Component {
     super(props);
     this.state = {
       //Test run with getting 1 name to return a schedule
-      calendars : [
-        {name: "Neeha", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448052'},
-        {name: "Rohith", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448067'},
-        {name: "Anuttham", url: 'https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=1448061'}
-      ]
+      tutors : props.tutors
     };
   }
 
-  createSchedule (calendar) {
-    return <Schedule url={calendar.url} key={calendar.name} name={calendar.name}/>;
+  createSchedule (tutor) {
+    return <Schedule url={tutor.url} key={tutor.name} name={tutor.name}/>;
   }
 
-  createSchedules(calendars) {
-    return calendars.map(this.createSchedule);
+  createSchedules(tutors) {
+    return tutors.map(this.createSchedule);
   }
 
   render() {
     return(
       <div>
-         {this.createSchedules(this.state.calendars)}
+         {this.createSchedules(this.state.tutors)}
       </div>
     );
   }

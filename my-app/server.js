@@ -16,10 +16,7 @@ var response = res;
   acuity.request('/calendars', function (err, res, calendars) {
     if (err) return console.error(err);
     response.send(
-      //calendars
-      {
-        express: JSON.stringify(calendars, null, '  ')
-      }
+      calendars
 
     );
   });
