@@ -80,22 +80,16 @@ export default class NameForm extends Component {
     }
 
     // return true if a > b
-/**
+
     if(this.state.zip.length>0){
       acuityRes.sort((a, b) =>
       {
-        var zipTutor1 = a.location.substring(0,4);
-        var zipTutor2 = b.location.substring(0,4);
-        var zipUser = this.state.zip;
-        <div>
-          <ProximityMatch zip1={zipTutor1} zip2={zipUser}/>
-          <ProximityMatch zip1={zipTutor2} zip2={zipUser}/>
-        </div>
-      }
-    }*/
+        this.closerOfTwoZips(a.location.substring(0,4), b.location.substring(0,4), this.state.zip);
+      });
+    }
 
 
-    if(this.state.subject.length>0){
+    if(this.state.subject.length>0 || this.state.zip.length>0){
       while(currTutor < 3){
         for(var i = 0; i<acuityRes.length; i++){
           var tutor = acuityRes[i];
@@ -126,6 +120,65 @@ export default class NameForm extends Component {
     });
   }
 
+  closerOfTwoZips(zip1, zip2, userZip){
+    var API1 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip1 + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
+    var API2 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip2 + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
+    var APIUser = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userZip + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
+
+    var lat1;
+    var lng1;
+    var lat2;
+    var lng2;
+    var userLat;
+    var userLng;
+
+
+    fetch(API1)
+    .then(response => response.json())
+    .then(data => {
+      lat1 = data.results[0].geometry.location.lat;
+      lng1 = data.results[0].geometry.location.lng;
+    });
+    fetch(API2)
+    .then(response => response.json())
+    .then(data =>{
+        lat2 = data.results[0].geometry.location.lat;
+        lng2 = data.results[0].geometry.location.lng;
+    });
+    fetch(APIUser)
+    .then(response => response.json())
+    .then(data =>{
+        userLat = data.results[0].geometry.location.lat;
+        userLng = data.results[0].geometry.location.lng;
+    });
+
+    var dist1 = this.distanceBetweenCoords(lat1, lng1, userLat, userLng);
+    var dist2 = this.distanceBetweenCoords(lat2, lng2, userLat, userLng);
+    if(dist1>dist2){
+      return true;
+    }else{
+      return false;
+    }
+
+  }
+
+  distanceBetweenCoords(lat1, lng1, lat2, lng2) {
+    var earthRadiusKm = 6371;
+
+    var dLat = this.degreesToRadians(parseFloat(lat2)-parseFloat(lat1))
+    var dLng = this.degreesToRadians(parseFloat(lng2)-parseFloat(lng1))
+
+    var lat1F = this.degreesToRadians(parseFloat(lat1))
+    var lat2F = this.degreesToRadians(parseFloat(lat2))
+
+    var a = Math.sin(dLat/2)*Math.sin(dLat/2) + Math.sin(dLng/2)*Math.sin(dLng/2)*Math.cos(lat1F)*Math.cos(lat2F)
+    var c = 2*Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+    return earthRadiusKm*c
+  }
+
+  degreesToRadians(degrees) {
+     return degrees*Math.PI/180;
+  }
 
   render() {
     return (
