@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 //import axios from 'axios'
-import curl from 'curl'
+//import curl from 'curl'
 
 class MailingList extends Component {
 
@@ -17,7 +17,7 @@ class MailingList extends Component {
   addToMailList() {
     //event.preventDefault();
 
-    curl.post('https://us16.api.mailchimp.com/3.0/lists/f403e6a812/members',{email_address:"purahmanian@gmail.com", status:"subscribed"});
+    //curl.post('https://us16.api.mailchimp.com/3.0/lists/f403e6a812/members',{email_address:"purahmanian@gmail.com", status:"subscribed"});
 
 /*
 
