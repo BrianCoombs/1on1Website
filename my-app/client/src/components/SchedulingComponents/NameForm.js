@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import AllSchedules from './AllSchedules'
 import acuityscheduling from 'acuityscheduling'
+import ProximityMatch from '../ProximityMatch'
 const request = require('request');
 
 export default class NameForm extends Component {
@@ -78,7 +79,22 @@ export default class NameForm extends Component {
       }
     }
 
-    //acuityRes.sort((a, b) => a.location.substring(0,4) - b.location.substring(0,4));
+    // return true if a > b
+/**
+    if(this.state.zip.length>0){
+      acuityRes.sort((a, b) =>
+      {
+        var zipTutor1 = a.location.substring(0,4);
+        var zipTutor2 = b.location.substring(0,4);
+        var zipUser = this.state.zip;
+        <div>
+          <ProximityMatch zip1={zipTutor1} zip2={zipUser}/>
+          <ProximityMatch zip1={zipTutor2} zip2={zipUser}/>
+        </div>
+      }
+    }*/
+
+
     if(this.state.subject.length>0){
       while(currTutor < 3){
         for(var i = 0; i<acuityRes.length; i++){

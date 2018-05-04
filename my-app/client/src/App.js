@@ -13,7 +13,7 @@ import OurTutors from './components/OurTutors'
 import Testimonials from './components/Testimonials'
 import Philanthropy from './components/Philanthropy'
 import MailingList from './components/MailingList'
-
+import ProximityMatch from './components/ProximityMatch'
 class App extends Component {
 
   render() {
@@ -29,6 +29,9 @@ class App extends Component {
 
         <div>
           <ScheduleTutor />
+        </div>
+        <div>
+          <ProximityMatch/>
         </div>
 
         <div>
