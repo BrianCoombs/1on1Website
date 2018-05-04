@@ -4,7 +4,6 @@
   "private": true,
   "dependencies": {
     "acuityscheduling": "^0.1.7",
-    "axios": "^0.18.0",
     "bootstrap": "^3.3.7",
     "create-react-class": "^15.6.3",
     "express": "^4.16.3",

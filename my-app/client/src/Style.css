@@ -444,13 +444,7 @@ div.philan {
   top: 355px;
 }
 
-.emailInput {
-  position: absolute;
-  left: 125px;
-  top: 75px;
-  width: 500px;
-  height: 20px;
-}
+
 
 
 /** Mailing list **/
@@ -465,6 +459,26 @@ div.mailingList {
     background-color: white;
     position: relative;
     color: #486279;
+}
+
+.mailing {
+  text-align: center;
+}
+
+.emailInput {
+  position: absolute;
+  left: 120px;
+  top: 75px;
+  width: 500px;
+  height: 20px;
+}
+
+.emailSubmit {
+  position: absolute;
+  right: 120px;
+  top: 75px;
+  width: 50px;
+  height: 20px;
 }
 
 

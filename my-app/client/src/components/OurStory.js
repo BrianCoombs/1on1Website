@@ -9,7 +9,7 @@ class OurStory extends Component {
       <div class="ourStory" id="ourstory">
         <br/><br/><br/>
         <h1 >Our Story</h1>
-
+        <br />
         <section class="timeline">
           <ul>
 
