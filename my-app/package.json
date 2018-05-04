@@ -17,6 +17,6 @@
     "eject": "cd client && react-scripts eject"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.1"
   }
 }
