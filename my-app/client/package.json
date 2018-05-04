@@ -1,0 +1,45 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "acuityscheduling": "^0.1.7",
+    "axios": "^0.18.0",
+    "bootstrap": "^3.3.7",
+    "create-react-class": "^15.6.3",
+    "express": "^4.16.3",
+    "npm": "^5.8.0",
+    "radium": "^0.23.0",
+    "react": "^16.2.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-scripts": "^1.1.1",
+    "request": "^2.85.0"
+  },
+  "scripts": {
+    "client": "cd client && npm start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
+    "jest": "^22.4.3",
+    "concurrently": "^3.5.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less)$": "../__mocks__/styleMock.js"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "proxy": "http://localhost:5000/"
+}
