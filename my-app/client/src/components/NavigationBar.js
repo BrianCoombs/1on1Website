@@ -23,6 +23,9 @@ class NavigationBar extends Component {
             <NavItem eventKey={3} href="#ourstory">
               Our Story
             </NavItem>
+            <NavItem eventKey={3} href="#tutors">
+              Our Tutors
+            </NavItem>
             <NavItem eventKey={3} href="#testimonials">
               Testimonials
             </NavItem>

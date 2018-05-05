@@ -6,7 +6,7 @@ class OurTutors extends Component {
 
   render() {
     return (
-      <div class="tutorsBg">
+      <div class="tutorsBg" id="tutors">
         <br/><br/><br/>
         <h1 id="ourtutors">Our Tutors</h1>
         <div class="tutors">

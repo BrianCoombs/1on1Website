@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import AllSchedules from './AllSchedules'
 import acuityscheduling from 'acuityscheduling'
-import ProximityMatch from '../ProximityMatch'
+
 const request = require('request');
 
 export default class NameForm extends Component {
@@ -44,7 +44,7 @@ export default class NameForm extends Component {
       .then(res =>
         {
           this.findTutors(res);
-          alert(JSON.stringify(res, null, '  '));
+          //alert(JSON.stringify(res, null, '  '));
         }
       )
       .catch(err => console.log(err));
@@ -137,11 +137,11 @@ export default class NameForm extends Component {
                 comp = 1;
               }
 	   console.log(comp)
- 	   if (comp < 0) {               
+ 	   if (comp < 0) {
                var temp = acuityRes[j]
                acuityRes[j] = acuityRes[j-1]
                acuityRes[j-1] = temp
-               j--           
+               j--
            } else {
                j = 0
            }
