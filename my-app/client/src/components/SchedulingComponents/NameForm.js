@@ -23,6 +23,9 @@ export default class NameForm extends Component {
   }
 
   handleSubmit(event) {
+    while(this.state.tutors.length>0){
+      this.state.tutors.pop();
+    }
     //To-do Implement name lookup
     /*
     AllSchedules.setState({
@@ -64,7 +67,6 @@ export default class NameForm extends Component {
   };
 
   findTutors (acuityRes) {
-    //this.clearList;
     var currTutor = 0;
     //Check name first
     if(this.state.name.length>0){
@@ -108,13 +110,6 @@ export default class NameForm extends Component {
     var tempTutors = this.state.tutors;
     var newTutor = {name:tutor.name, url:('https://app.acuityscheduling.com/schedule.php?owner=13918864&calendarID=' + tutor.id)};
     tempTutors[currTutor] = newTutor;
-    this.setState({
-      tutors : tempTutors
-    });
-  }
-
-  clearList() {
-    var tempTutors = [3];
     this.setState({
       tutors : tempTutors
     });
