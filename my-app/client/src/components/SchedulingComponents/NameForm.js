@@ -84,12 +84,12 @@ export default class NameForm extends Component {
     if(this.state.zip.length>0){
       acuityRes.sort((a, b) =>
       {
-        this.closerOfTwoZips(a.location.substring(0,4), b.location.substring(0,4), this.state.zip);
+        return this.closerOfTwoZips(a.location.substring(0,5), b.location.substring(0,5), this.state.zip);
       });
     }
 
 
-    if(this.state.subject.length>0 || this.state.zip.length>0){
+    if(this.state.subject.length>0){
       while(currTutor < 3){
         for(var i = 0; i<acuityRes.length; i++){
           var tutor = acuityRes[i];
@@ -98,6 +98,18 @@ export default class NameForm extends Component {
             this.addTutorToList(currTutor, tutor);
             break;
           }
+        }
+        currTutor++
+      }
+    }
+    if(this.state.zip.length>0){
+      while(currTutor < 3){
+        for(var i = 0; i<acuityRes.length; i++){
+          var tutor = acuityRes[i];
+            acuityRes.splice(i, 1);
+            this.addTutorToList(currTutor, tutor);
+            break;
+
         }
         currTutor++
       }
@@ -124,6 +136,9 @@ export default class NameForm extends Component {
     var API1 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip1 + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
     var API2 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip2 + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
     var APIUser = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userZip + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
+    console.log("Tutor 1 zip:", zip1)
+    console.log("Tutor 2 zip:", zip2)
+    console.log("User zip", userZip)
 
     var lat1;
     var lng1;
@@ -132,13 +147,40 @@ export default class NameForm extends Component {
     var userLat;
     var userLng;
 
-
     fetch(API1)
     .then(response => response.json())
     .then(data => {
       lat1 = data.results[0].geometry.location.lat;
       lng1 = data.results[0].geometry.location.lng;
+      fetch(API2)
+      .then(response => response.json())
+      .then(data2 =>{
+          lat2 = data2.results[0].geometry.location.lat;
+          lng2 = data2.results[0].geometry.location.lng;
+          fetch(APIUser)
+          .then(response => response.json())
+          .then(data3 =>{
+              userLat = data3.results[0].geometry.location.lat;
+              userLng = data3.results[0].geometry.location.lng;
+              var dist1 = this.distanceBetweenCoords(lat1, lng1, userLat, userLng);
+              var dist2 = this.distanceBetweenCoords(lat2, lng2, userLat, userLng);
+
+              if(parseFloat(dist1)>parseFloat(dist2)){
+                console.log("DIST 1 > DIST 2")
+                console.log("dist 1", dist1)
+                console.log("dist 2", dist2)
+                return -1;
+              }else{
+                console.log("DIST 1 <= DIST 2")
+                console.log("dist 1", dist1)
+                console.log("dist 2", dist2)
+                return 1;
+              }
+          });
+      });
     });
+
+/**
     fetch(API2)
     .then(response => response.json())
     .then(data =>{
@@ -158,7 +200,7 @@ export default class NameForm extends Component {
       return true;
     }else{
       return false;
-    }
+    }*/
 
   }
 
