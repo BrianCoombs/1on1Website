@@ -40,7 +40,7 @@ export default class NameForm extends Component {
       alert(body.explanation);
     });
     */
-    this.callAcuityApi()
+    this.callApi('/api/acuity')
       .then(res =>
         {
           this.findTutors(res);
@@ -57,8 +57,8 @@ export default class NameForm extends Component {
     event.preventDefault();
   }
 
-  callAcuityApi = async () => {
-    const response = await fetch('/api/acuity');
+  callApi = async (fetchKey) => {
+    const response = await fetch(fetchKey);
     const body = await response.json();
 
     if (response.status !== 200) throw Error(body.message);
@@ -66,7 +66,7 @@ export default class NameForm extends Component {
     return body;
   };
 
-  findTutors (acuityRes) {
+  async findTutors (acuityRes) {
     var currTutor = 0;
     //Check name first
     if(this.state.name.length>0){
@@ -82,13 +82,77 @@ export default class NameForm extends Component {
     }
 
     // return true if a > b
-
+    console.log(acuityRes[0])
     if(this.state.zip.length>0){
-      acuityRes.sort((a, b) =>
-      {
-        return this.closerOfTwoZips(a.location.substring(0,5), b.location.substring(0,5), this.state.zip);
-      });
+      for (var i = 1; i < acuityRes.length; i++) {
+        var j = i
+        while (j > 0) {
+           var comp = 0
+               var API1 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + acuityRes[j-1].location.substring(0,5) + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
+    var API2 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + acuityRes[j].location.substring(0,5) + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
+    var APIUser = "https://maps.googleapis.com/maps/api/geocode/json?address=" + this.state.zip + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
+    //console.log("Tutor 1 zip:", zip1)
+    //console.log("Tutor 2 zip:", zip2)
+    //console.log("User zip", userZip)
+
+    var lat1;
+    var lng1;
+    var lat2;
+    var lng2;
+    var userLat;
+    var userLng;
+
+    await fetch(API1)
+    .then(response => response.json())
+    .then(data => {
+      lat1 = data.results[0].geometry.location.lat;
+      lng1 = data.results[0].geometry.location.lng;
+    });
+    await fetch(API2)
+    .then(response => response.json())
+    .then(data2 =>{
+        lat2 = data2.results[0].geometry.location.lat;
+        lng2 = data2.results[0].geometry.location.lng;
+    });
+    await fetch(APIUser)
+    .then(response => response.json())
+    .then(data3 =>{
+        userLat = data3.results[0].geometry.location.lat;
+        userLng = data3.results[0].geometry.location.lng;
+    });
+    var dist1 = this.distanceBetweenCoords(lat1, lng1, userLat, userLng);
+    var dist2 = this.distanceBetweenCoords(lat2, lng2, userLat, userLng);
+
+    if(parseFloat(dist1)>parseFloat(dist2)){
+                //console.log("DIST 1 > DIST 2")
+                //console.log("dist 1", dist1)
+                //console.log("dist 2", dist2)
+                console.log("i hate my life")
+                comp = -1;
+              }else{
+                //console.log("DIST 1 <= DIST 2")
+                //console.log("dist 1", dist1)
+                //console.log("dist 2", dist2)
+                console.log("fml")
+                comp = 1;
+              }
+	   console.log(comp)
+ 	   if (comp < 0) {               
+               var temp = acuityRes[j]
+               acuityRes[j] = acuityRes[j-1]
+               acuityRes[j-1] = temp
+               j--           
+           } else {
+               j = 0
+           }
+        }
+      }
+      //acuityRes.sort((a, b) =>
+      //{
+      //  return this.closerOfTwoZips(a.location.substring(0,5), b.location.substring(0,5), this.state.zip);
+      //});
     }
+    console.log(acuityRes[0])
 
 
     if(this.state.subject.length>0){
@@ -127,13 +191,13 @@ export default class NameForm extends Component {
     });
   }
 
-  closerOfTwoZips(zip1, zip2, userZip){
+  async closerOfTwoZips(zip1, zip2, userZip){
     var API1 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip1 + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
     var API2 = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip2 + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
     var APIUser = "https://maps.googleapis.com/maps/api/geocode/json?address=" + userZip + "&key=AIzaSyB1s8lN_cd_FhoZYhuguvaQW33zEu31FTQ";
-    console.log("Tutor 1 zip:", zip1)
-    console.log("Tutor 2 zip:", zip2)
-    console.log("User zip", userZip)
+    //console.log("Tutor 1 zip:", zip1)
+    //console.log("Tutor 2 zip:", zip2)
+    //console.log("User zip", userZip)
 
     var lat1;
     var lng1;
@@ -142,38 +206,40 @@ export default class NameForm extends Component {
     var userLat;
     var userLng;
 
-    fetch(API1)
+    await fetch(API1)
     .then(response => response.json())
     .then(data => {
       lat1 = data.results[0].geometry.location.lat;
       lng1 = data.results[0].geometry.location.lng;
-      fetch(API2)
-      .then(response => response.json())
-      .then(data2 =>{
-          lat2 = data2.results[0].geometry.location.lat;
-          lng2 = data2.results[0].geometry.location.lng;
-          fetch(APIUser)
-          .then(response => response.json())
-          .then(data3 =>{
-              userLat = data3.results[0].geometry.location.lat;
-              userLng = data3.results[0].geometry.location.lng;
-              var dist1 = this.distanceBetweenCoords(lat1, lng1, userLat, userLng);
-              var dist2 = this.distanceBetweenCoords(lat2, lng2, userLat, userLng);
+    });
+    await fetch(API2)
+    .then(response => response.json())
+    .then(data2 =>{
+        lat2 = data2.results[0].geometry.location.lat;
+        lng2 = data2.results[0].geometry.location.lng;
+    });
+    await fetch(APIUser)
+    .then(response => response.json())
+    .then(data3 =>{
+        userLat = data3.results[0].geometry.location.lat;
+        userLng = data3.results[0].geometry.location.lng;
+    });
+    var dist1 = this.distanceBetweenCoords(lat1, lng1, userLat, userLng);
+    var dist2 = this.distanceBetweenCoords(lat2, lng2, userLat, userLng);
 
-              if(parseFloat(dist1)>parseFloat(dist2)){
-                console.log("DIST 1 > DIST 2")
-                console.log("dist 1", dist1)
-                console.log("dist 2", dist2)
+    if(parseFloat(dist1)>parseFloat(dist2)){
+                //console.log("DIST 1 > DIST 2")
+                //console.log("dist 1", dist1)
+                //console.log("dist 2", dist2)
+                console.log("i hate my life")
                 return -1;
               }else{
-                console.log("DIST 1 <= DIST 2")
-                console.log("dist 1", dist1)
-                console.log("dist 2", dist2)
+                //console.log("DIST 1 <= DIST 2")
+                //console.log("dist 1", dist1)
+                //console.log("dist 2", dist2)
+                console.log("fml")
                 return 1;
               }
-          });
-      });
-    });
 
 /**
     fetch(API2)
